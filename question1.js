@@ -1,3 +1,10 @@
+/*
+
+BILL DIVISION
+
+*/
+
+
 'use strict';
 
 process.stdin.resume();
@@ -31,6 +38,21 @@ function readLine() {
 
 function bonAppetit(bill, k, b) {
     // Write your code here
+    let sharedBill = 0
+    for(let i = 0; i < bill.length; i++) {
+        if(i!=k){
+            sharedBill += bill[i]
+        }
+    }
+    sharedBill /= 2
+    
+    if(sharedBill == b){
+        console.log('Bon Appetit')
+    }
+    else{
+        let owedMoney = b - sharedBill
+        console.log(owedMoney)
+    }
 
 }
 
