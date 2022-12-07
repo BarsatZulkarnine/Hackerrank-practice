@@ -35,7 +35,15 @@ function readLine() {
 
 function kangaroo(x1, v1, x2, v2) {
   // Write your code here
-
+  if (v2 < v1) {
+    if ((x2 - x1) % (v1 - v2) == 0) {
+      return "YES";
+    } else {
+      return "NO";
+    }
+  } else {
+    return "NO";
+  }
 }
 
 function main() {
