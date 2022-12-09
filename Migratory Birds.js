@@ -31,6 +31,8 @@ function readLine() {
 
 function migratoryBirds(arr) {
     // Write your code here
+    const birdTypes = Array(6).fill(0)
+    
 
 }
 
