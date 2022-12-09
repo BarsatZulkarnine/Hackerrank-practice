@@ -34,7 +34,7 @@ function dayOfProgrammer(year) {
   let leapYear = "12.09.";
   let notleapYear = "13.09.";
   if (year > 1918) {
-    if (year % 400 == 0 || (year % 4 == 0 && (year % 400 != 0))) {
+    if (year % 400 == 0 || (year % 4 == 0 && (year % 100 != 0))) {
       return (leapYear += year);
     }
     else{
