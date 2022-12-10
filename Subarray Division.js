@@ -34,6 +34,16 @@ function readLine() {
 
 function birthday(s, d, m) {
     // Write your code here
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < s.length; i++) {
+        for(let j = 0; j < m; j++) {
+            sum += s[i+j]
+        }
+        if(sum == 4) count++;
+        sum = 0
+    }
+    return count
 
 }
 
