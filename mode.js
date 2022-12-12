@@ -10,8 +10,8 @@ function getMode(array){
         // for each number in array,
         // if it doesn't aleady exist as a jet ib the
         // object, create one and set its value to 1
-        if(!obj(number)) {
-            obj(number) = 1;
+        if(!obj[number]) {
+            obj[number] = 1;
         } else{
             //if it already exists as key on the object,
             // increment is corresponding value.
@@ -30,6 +30,8 @@ function getMode(array){
             highestValueKey = key
         }
     }
+    // convert key back to number
+    return Number(highestValueKey)
 
 
 }
