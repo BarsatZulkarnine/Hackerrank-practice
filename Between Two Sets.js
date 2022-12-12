@@ -34,6 +34,8 @@ function readLine() {
 function getTotalX(a, b) {
     // Write your code here
 
+    
+
 }
 
 function main() {
