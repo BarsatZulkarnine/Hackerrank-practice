@@ -33,6 +33,23 @@ function readLine() {
 
 function sockMerchant(n, ar) {
     // Write your code here
+    const obj = {}
+    // loop over array
+    ar.forEach(number => {
+        
+        if(!obj[number]) {
+            obj[number] = 1;
+        } else{
+            obj[number] += 1;
+        }
+    });
+
+   let pairs = 0
+
+    for (let key in obj){
+        const value = obj[key];
+        pairs+= Math.floor(value /  2)
+    }
 
 }
 
