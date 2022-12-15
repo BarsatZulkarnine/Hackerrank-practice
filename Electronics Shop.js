@@ -29,6 +29,20 @@ function getMoneySpent(keyboards, drives, b) {
     /*
      * Write your code here.
      */
+    let maxPrice = 0
+    let total = 0
+    for (let i in keyboards) {
+        for (let j in drives) {
+            total = keyboards[i] + drives[j]
+            if(total <= b && maxPrice<total){
+                maxPrice = total
+            }
+        }
+    }
+    if(maxPrice!=0){
+        return maxPrice
+    }
+    else return -1
 
 }
 
