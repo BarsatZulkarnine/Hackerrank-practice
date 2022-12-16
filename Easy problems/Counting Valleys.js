@@ -23,28 +23,27 @@ function readLine() {
 }
 
 /*
- * Complete the 'formingMagicSquare' function below.
+ * Complete the 'countingValleys' function below.
  *
  * The function is expected to return an INTEGER.
- * The function accepts 2D_INTEGER_ARRAY s as parameter.
+ * The function accepts following parameters:
+ *  1. INTEGER steps
+ *  2. STRING path
  */
 
-function formingMagicSquare(s) {
+function countingValleys(steps, path) {
     // Write your code here
-    
 
 }
 
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
-    let s = Array(3);
+    const steps = parseInt(readLine().trim(), 10);
 
-    for (let i = 0; i < 3; i++) {
-        s[i] = readLine().replace(/\s+$/g, '').split(' ').map(sTemp => parseInt(sTemp, 10));
-    }
+    const path = readLine();
 
-    const result = formingMagicSquare(s);
+    const result = countingValleys(steps, path);
 
     ws.write(result + '\n');
 
