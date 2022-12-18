@@ -23,36 +23,29 @@ function readLine() {
 }
 
 /*
- * Complete the 'getTotalX' function below.
+ * Complete the 'pageCount' function below.
  *
  * The function is expected to return an INTEGER.
  * The function accepts following parameters:
- *  1. INTEGER_ARRAY a
- *  2. INTEGER_ARRAY b
+ *  1. INTEGER n
+ *  2. INTEGER p
  */
 
-function getTotalX(a, b) {
+function pageCount(n, p) {
     // Write your code here
-    
 
 }
 
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
-    const firstMultipleInput = readLine().replace(/\s+$/g, '').split(' ');
+    const n = parseInt(readLine().trim(), 10);
 
-    const n = parseInt(firstMultipleInput[0], 10);
+    const p = parseInt(readLine().trim(), 10);
 
-    const m = parseInt(firstMultipleInput[1], 10);
+    const result = pageCount(n, p);
 
-    const arr = readLine().replace(/\s+$/g, '').split(' ').map(arrTemp => parseInt(arrTemp, 10));
-
-    const brr = readLine().replace(/\s+$/g, '').split(' ').map(brrTemp => parseInt(brrTemp, 10));
-
-    const total = getTotalX(arr, brr);
-
-    ws.write(total + '\n');
+    ws.write(result + '\n');
 
     ws.end();
 }
