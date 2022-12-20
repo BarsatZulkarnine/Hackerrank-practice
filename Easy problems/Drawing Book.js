@@ -33,6 +33,32 @@ function readLine() {
 
 function pageCount(n, p) {
     // Write your code here
+    let count = 0;
+    let mid = Math.floor(n/2)
+    if(p = 1){
+        return 1
+    }
+    if(p<= mid){
+        count = 1
+        for(let i = 0; i <= mid; ) {
+            count+= 1
+            if(i >= p){
+                break
+            }
+        }
+        i+=2
+    }
+    else{
+        for(let i = n; i >= mid;) {
+            
+            if((i == p) || (i-1 == p)){
+                break
+            }
+            count+= 1
+            i-=2
+        }
+    }
+    return count
 
 }
 
