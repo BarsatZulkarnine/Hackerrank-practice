@@ -32,9 +32,7 @@ function readLine() {
  */
 
 function getTotalX(a, b) {
-    
-    
-
+    let set_A= null
 }
 
 function main() {
