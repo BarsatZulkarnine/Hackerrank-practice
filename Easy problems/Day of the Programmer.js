@@ -22,6 +22,7 @@ function readLine() {
   return inputString[currentLine++];
 }
 
+
 /*
  * Complete the 'dayOfProgrammer' function below.
  *
