@@ -23,6 +23,7 @@ function readLine() {
 }
 
 
+
 /*
  * Complete the 'dayOfProgrammer' function below.
  *
