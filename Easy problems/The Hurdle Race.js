@@ -23,29 +23,31 @@ function readLine() {
 }
 
 /*
- * Complete the 'simpleArraySum' function below.
+ * Complete the 'hurdleRace' function below.
  *
  * The function is expected to return an INTEGER.
- * The function accepts INTEGER_ARRAY ar as parameter.
+ * The function accepts following parameters:
+ *  1. INTEGER k
+ *  2. INTEGER_ARRAY height
  */
 
-function simpleArraySum(ar) {
+function hurdleRace(k, height) {
     // Write your code here
-    let sum = 0;
-    for (let a in ar){
-        sum += ar[a];
-    }
-    return sum;
+
 }
 
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
-    const arCount = parseInt(readLine().trim(), 10);
+    const firstMultipleInput = readLine().replace(/\s+$/g, '').split(' ');
 
-    const ar = readLine().replace(/\s+$/g, '').split(' ').map(arTemp => parseInt(arTemp, 10));
+    const n = parseInt(firstMultipleInput[0], 10);
 
-    const result = simpleArraySum(ar);
+    const k = parseInt(firstMultipleInput[1], 10);
+
+    const height = readLine().replace(/\s+$/g, '').split(' ').map(heightTemp => parseInt(heightTemp, 10));
+
+    const result = hurdleRace(k, height);
 
     ws.write(result + '\n');
 
