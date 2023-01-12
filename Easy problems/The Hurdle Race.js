@@ -33,6 +33,7 @@ function readLine() {
 
 function hurdleRace(k, height) {
     // Write your code here
+    // ...Arr is required, otherwise arrry, max/min doesnt work
     let highest = Math.max(...height)
     if (k < highest) {
         return highest - k
