@@ -1,25 +1,25 @@
-'use strict';
+"use strict";
 
-const fs = require('fs');
+const fs = require("fs");
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
 /*
@@ -30,22 +30,33 @@ function readLine() {
  */
 
 function utopianTree(n) {
-    // Write your code here
-
+  // Write your code here
+  let height = 1;
+  let spring = true;
+  for (let i = 0; i < n; i++) {
+    if (spring) {
+      height *= 2;
+      spring = false;
+    } else {
+      height += 1;
+      spring = true;
+    }
+  }
+  return height;
 }
 
 function main() {
-    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+  const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
-    const t = parseInt(readLine().trim(), 10);
+  const t = parseInt(readLine().trim(), 10);
 
-    for (let tItr = 0; tItr < t; tItr++) {
-        const n = parseInt(readLine().trim(), 10);
+  for (let tItr = 0; tItr < t; tItr++) {
+    const n = parseInt(readLine().trim(), 10);
 
-        const result = utopianTree(n);
+    const result = utopianTree(n);
 
-        ws.write(result + '\n');
-    }
+    ws.write(result + "\n");
+  }
 
-    ws.end();
+  ws.end();
 }
